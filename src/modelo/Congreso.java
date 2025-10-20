@@ -81,7 +81,7 @@ public boolean agragarAuspiciante( String movil, String mail, String razonSocial
 		 throw new Exception("el cuit ya esta registrado");
 	}
 	if(!lstPersonas.isEmpty()) {
-		id=((Auspiciante)lstPersonas.get(lstPersonas.size()-1)).getIdPersona()+1;
+		id=(lstPersonas.get(lstPersonas.size()-1)).getIdPersona()+1;
 		
 	}
 	lstPersonas.add(new Auspiciante (id ,movil, mail, razonSocial,  cuit,montoAportado));
@@ -90,5 +90,61 @@ public boolean agragarAuspiciante( String movil, String mail, String razonSocial
 	
 	
 }
+
+
+/*+ traerEspectador():List<Espectador>*/
+
+public List<Espectador> traerEspectador() {
+	
+	List<Espectador> lstAux = new ArrayList<Espectador>();
+	for (int i = 0; i < lstPersonas.size(); i++) {
+		if (lstPersonas.get(i) instanceof Espectador) {
+			lstAux.add((Espectador) lstPersonas.get(i));
+
+		}
+
+	}
+	return lstAux;
+}
+
+
+/*5) + traerEspectador(long nroDocumento): Espectador*/
+
+public Espectador traerEspectador(long nroDocumento) {
+	int i=0;
+	boolean flag=false;
+	Espectador aux = null;
+	while(lstPersonas.size()>i && !flag ) {
+		if (lstPersonas.get(i) instanceof Espectador ) {
+			if(((Espectador)lstPersonas.get(i)).getNroDocumento()==(nroDocumento)){
+				
+			aux=(Espectador)lstPersonas.get(i);
+			flag=true;
+
+		}
+		}
+	i++;
+	}
+	
+	return aux;
+}
+
+
+public boolean agragarEspectador( String movil, String mail, String nombre, String apellido, String tipoDocumento,long nroDocumento, String nivelEstudio) {
+	int id=1;
+
+
+	if(!lstPersonas.isEmpty()) {
+		id=(lstPersonas.get(lstPersonas.size()-1)).getIdPersona()+1;
+		
+	}
+	lstPersonas.add(new Espectador (id ,movil, mail, nombre,  apellido,  tipoDocumento,nroDocumento,  nivelEstudio));
+	
+	return true;
+	
+	
+}
+
+
 
 }

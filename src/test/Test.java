@@ -1,9 +1,9 @@
 package test;
-
+import modelo.Espectador;
 import modelo.Auspiciante;
 import modelo.Congreso;
 
-public class Tesrt {
+public class Test {
 
 	public static void main(String[] args) {
 			Congreso sistema=new Congreso();
@@ -26,6 +26,8 @@ public class Tesrt {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			
+			System.out.println(sistema.agragarEspectador("1555555555", "dperez@edu.com","Dario", "Perez", "dni",55555555, "universitario"));
 
 	}
 
