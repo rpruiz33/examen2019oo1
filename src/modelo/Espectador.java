@@ -45,4 +45,12 @@ public class Espectador extends Persona {
 		this.nroDocumento = nroDocumento;
 		this.nivelEstudio = nivelEstudio;
 	}
+	@Override
+	public String toString() {
+		return "Espectador [nombre=" + nombre + ", apellido=" + apellido + ", tipoDocumento=" + tipoDocumento
+				+ ", nroDocumento=" + nroDocumento + ", nivelEstudio=" + nivelEstudio + ", idPersona=" + idPersona
+				+ "\n]";
+	}
+
+
 }
