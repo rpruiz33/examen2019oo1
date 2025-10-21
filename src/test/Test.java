@@ -1,5 +1,8 @@
 package test;
 import modelo.Espectador;
+
+import java.time.LocalDate;
+
 import modelo.Auspiciante;
 import modelo.Congreso;
 
@@ -36,7 +39,19 @@ public class Test {
 			System.out.println(sistema.traerEspectador());
 	
 	
+			System.out.println(sistema.agregarConferencia("La BIGDATA en la filosofia", LocalDate.of(2019,10,8), 1200));
+			System.out.println(sistema.traerConferencia(1).agregarAuspiciante(sistema.traerAuspiciante("30-1111111-9"))); 
+			
+			System.out.println(sistema.traerConferencia(1).agregarAuspiciante(sistema.traerAuspiciante("30-2222222-9")));
+			
+			System.out.println(sistema.agregarConferencia("Serr o no ser en la era moderna", LocalDate.of(2019,10,8), 5000));
+			System.out.println(sistema.traerConferencia(2).agregarAuspiciante(sistema.traerAuspiciante("30-33333333-9")));
+			
+			System.out.println(sistema.agregarConferencia("EL ABC de la filosofia", LocalDate.of(2019,10,8), 5000));
+			System.out.println(sistema.traerConferencia(3).agregarAuspiciante(sistema.traerAuspiciante("30-44444444-9")));
+			System.out.println(sistema.getLstConferencias());
+
+	
 	
 	}
-
 }

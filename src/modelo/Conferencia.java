@@ -57,6 +57,25 @@ public String toString() {
 }
 
 
+/* + agregarAuspiciante(Auspiciante auspiciante): boolean*/
 
+public  boolean agregarAuspiciante(Auspiciante auspiciante) {
+	boolean flag=false;
+	int i=0;
+	Auspiciante aux=null;
+	while(lstAuspiciante.size()>i && !flag)
+		{
+			if(lstAuspiciante.get(i).equals(auspiciante)) {
+				flag=true;
+				
+			}
+			i++;
+		}
+		return lstAuspiciante.add(auspiciante);
+		
+}
 
 }
+
+
+

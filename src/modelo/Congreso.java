@@ -152,12 +152,31 @@ public boolean agragarEspectador( String movil, String mail, String nombre, Stri
 public boolean agregarConferencia(String titulo, LocalDate dia, double costo) {
 
 int id=1;
-if(lstConferencias.isEmpty()) {
+if(!lstConferencias.isEmpty()) {
 id=lstConferencias.get(lstConferencias.size()-1).getIdConferencia()+1;
 }
 
 return lstConferencias.add(new Conferencia(id,titulo, dia, costo));
 
 }
+
+public Conferencia traerConferencia(int idConferencia) {
+int i=0;
+Conferencia conferenciaAux= null;
+boolean encontrado=false;
+	while (lstConferencias.size()>i && !encontrado) {
+		if(lstConferencias.get(i).getIdConferencia()==idConferencia) {
+			conferenciaAux=lstConferencias.get(i);
+			encontrado=true;
+		}
+		i++;
+	}
+return conferenciaAux;
+
+
+}
+
+
+
 
 }
