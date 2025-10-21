@@ -28,7 +28,15 @@ public class Test {
 			}
 			
 			System.out.println(sistema.agragarEspectador("1555555555", "dperez@edu.com","Dario", "Perez", "dni",55555555, "universitario"));
-
+			System.out.println(sistema.agragarEspectador("1566666666", "dgonzales@edu.com","Diego", "Gonzales", "dni",66666666, "universitario"));
+			System.out.println(sistema.agragarEspectador("1577777777", "fmariscano@edu.com","Franco", "Mariscano", "dni",77777777, "Postgrado"));
+			System.out.println(sistema.agragarEspectador("1588888888", "cmadero@edu.com","Carolina", "Madero", "dni",88888888, "Postgrado"));
+	
+	
+			System.out.println(sistema.traerEspectador());
+	
+	
+	
 	}
 
 }
