@@ -1,5 +1,6 @@
 package modelo;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -145,6 +146,18 @@ public boolean agragarEspectador( String movil, String mail, String nombre, Stri
 	
 }
 
+/*+ agregarConferencia(String titulo, LocalDate dia, double costo): boolean*/
 
+
+public boolean agregarConferencia(String titulo, LocalDate dia, double costo) {
+
+int id=1;
+if(lstConferencias.isEmpty()) {
+id=lstConferencias.get(lstConferencias.size()-1).getIdConferencia()+1;
+}
+
+return lstConferencias.add(new Conferencia(id,titulo, dia, costo));
+
+}
 
 }
